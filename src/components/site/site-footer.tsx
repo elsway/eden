@@ -1,4 +1,4 @@
-import { FOUNDATION_TOPICS, TOPIC_GROUPS, topicUrl } from "@/content/foundations";
+import { FOUNDATION_TOPICS, TOPIC_GROUPS } from "@/content/foundations";
 import { REPO_URL } from "./site-header";
 
 const SOURCES = [
@@ -27,7 +27,7 @@ export function SiteFooter() {
             <ul className="mt-3 grid gap-2">
               {FOUNDATION_TOPICS.filter((t) => t.group === group).map((t) => (
                 <li key={t.slug}>
-                  <a href={topicUrl(t.slug)} target="_blank" rel="noopener noreferrer" className={LINK}>
+                  <a href={`#topic-${t.slug}`} className={LINK}>
                     {t.title}
                   </a>
                 </li>

@@ -8,7 +8,11 @@ import { Divider, FrameRails, HeaderNodes } from "@/components/site/frame";
 import { Hero } from "@/components/site/hero";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
-import { SOURCE_URL, topicUrl } from "@/content/foundations";
+import { EVO_PALETTE } from "@/content/evo-palette";
+import { CRAWL_TOTALS, FOUNDATION_TOPICS } from "@/content/foundations";
+
+const TOPICS_WITH_PAGES = FOUNDATION_TOPICS.filter((t) => t.publicPages + t.gatedPages > 0).length;
+const TOTAL_PAGES = CRAWL_TOTALS.publicPages + CRAWL_TOTALS.gatedPages;
 
 export default function HomePage() {
   return (
@@ -24,16 +28,16 @@ export default function HomePage() {
         <section id="charts" aria-label="Foundations in charts" className="relative w-full scroll-mt-16 pb-8 md:pb-12">
           <div className="mx-auto w-full max-w-[1336px] px-4 pt-12 lg:px-6">
             <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-12 lg:gap-6">
-              <ChartTile label="Pages per topic" href={`${SOURCE_URL}/foundations`} linkLabel="Foundations" className="h-[380px] md:col-span-7">
+              <ChartTile label="Pages per topic" meta={`${TOPICS_WITH_PAGES} topics · solid public, hatched sign-in`} className="h-[380px] md:col-span-7">
                 <CoverageChart />
               </ChartTile>
-              <ChartTile label="Open without sign-in" href={`${SOURCE_URL}/foundations`} linkLabel="Foundations" className="h-[380px] md:col-span-5">
+              <ChartTile label="Open without sign-in" meta={`${CRAWL_TOTALS.publicPages} of ${TOTAL_PAGES} pages`} className="h-[380px] md:col-span-5">
                 <OpenGauge />
               </ChartTile>
-              <ChartTile label="Contrast on white" href={topicUrl("accessibility")} linkLabel="Accessibility" className="h-[400px] md:col-span-5">
+              <ChartTile label="Contrast on white" meta="500 tones vs AAA 7:1" className="h-[400px] md:col-span-5">
                 <ContrastRings />
               </ChartTile>
-              <ChartTile label="Evo palette" href={topicUrl("color")} linkLabel="Color" className="h-[400px] md:col-span-7">
+              <ChartTile label="Evo palette" meta={`${EVO_PALETTE.length} families × 6 tones`} className="h-[400px] md:col-span-7">
                 <PaletteGrid />
               </ChartTile>
             </div>

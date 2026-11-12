@@ -3,8 +3,6 @@
  * site (2026-11-12). Summaries are paraphrased, not copied.
  */
 
-export const SOURCE_URL = "https://playbook.ebay.com";
-
 export type TopicGroup = "Identity" | "Layout" | "Interaction";
 
 export interface FoundationTopic {
@@ -152,10 +150,6 @@ export const FOUNDATION_TOPICS: readonly FoundationTopic[] = [
 export const CRAWL_TOTALS = { publicPages: 57, gatedPages: 8 } as const;
 
 export const TOPIC_GROUPS: readonly TopicGroup[] = ["Identity", "Layout", "Interaction"];
-
-export function topicUrl(slug: string): string {
-  return `${SOURCE_URL}/foundations/${slug}`;
-}
 
 export function publicShare(): number {
   const { publicPages, gatedPages } = CRAWL_TOTALS;
