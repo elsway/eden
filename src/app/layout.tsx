@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { Cal_Sans, Geist_Mono } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const calSans = Cal_Sans({
+// Cal Sans 2 variable (calcom/sans v2.011, OFL): the same face bklit.com ships.
+const calSans = localFont({
+  src: "./fonts/CalSansVF.woff2",
   variable: "--font-cal-sans",
-  weight: "400",
-  subsets: ["latin"],
+  weight: "100 900",
   display: "swap",
 });
 

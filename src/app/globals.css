@@ -270,6 +270,9 @@
   --surface-btn: color-mix(in oklab, #fff 2.6%, transparent);
   --border-btn: color-mix(in oklab, #fff 8%, transparent);
   --divider: color-mix(in oklab, #fff 4%, transparent);
+  --sidebar: #1b1b1b;
+  --card: #1b1b1b;
+  --muted: color-mix(in oklab, #fff 4%, transparent);
 }
 
 @theme inline {
