@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { EdenLogo } from "./eden-logo";
 
 export const REPO_URL = "https://github.com/elsway/eden";
 
@@ -15,38 +15,21 @@ function GithubMark({ className }: { readonly className?: string }) {
   );
 }
 
-/** Mark: four Evo 500 tones as a 2×2 grid, standing in for Bklit's logo glyph. */
-function Mark() {
-  return (
-    <span aria-hidden className="grid size-5 grid-cols-2 gap-[2px]">
-      <span className="rounded-[2px] bg-[#0968F6]" />
-      <span className="rounded-[2px] bg-[#EEBB04]" />
-      <span className="rounded-[2px] bg-[#F02D2D]" />
-      <span className="rounded-[2px] bg-[#92C821]" />
-    </span>
-  );
-}
-
 export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 h-16 w-full bg-sidebar/80 backdrop-blur-sm before:pointer-events-none before:absolute before:inset-x-0 before:bottom-0 before:h-px before:bg-border/64">
       <div className="mx-auto grid h-full max-w-[1336px] grid-cols-[auto_1fr_auto] items-center gap-4 md:grid-cols-[1fr_auto_1fr] px-4 lg:px-6">
-        <a href="#top" className="flex items-center gap-2 whitespace-nowrap text-xl font-bold leading-none sm:text-2xl">
-          <Mark />
-          <span>
-            Foundations <span className="font-normal text-muted-foreground">Hub</span>
-          </span>
+        <a href="#top" aria-label="Eden Systems, back to top" className="flex items-center text-foreground">
+          <EdenLogo className="h-9" />
         </a>
         <nav aria-label="Main navigation" className="hidden items-center gap-1 justify-self-center md:flex">
           {NAV.map((item) => (
             <a
               key={item.label}
               href={item.href}
-              {...("external" in item ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               className="inline-flex h-8 items-center gap-1 rounded-lg px-3 text-sm font-medium text-foreground/90 transition-colors hover:bg-white/[0.05] hover:text-foreground"
             >
               {item.label}
-              {"external" in item ? <ArrowUpRight aria-hidden className="size-3 text-muted-foreground" /> : null}
             </a>
           ))}
         </nav>

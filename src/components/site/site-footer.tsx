@@ -1,4 +1,5 @@
 import { FOUNDATION_TOPICS, TOPIC_GROUPS } from "@/content/foundations";
+import { EdenLogo } from "./eden-logo";
 import { REPO_URL } from "./site-header";
 
 const SOURCES = [
@@ -14,10 +15,8 @@ export function SiteFooter() {
     <footer className="relative w-full">
       <div className="mx-auto grid max-w-[1336px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_repeat(4,1fr)] lg:px-6">
         <div>
-          <p className="text-lg font-bold">
-            Foundations <span className="font-normal text-muted-foreground">Hub</span>
-          </p>
-          <p className="mt-2 max-w-[28ch] text-sm text-muted-foreground">
+          <EdenLogo className="h-12 text-foreground" />
+          <p className="mt-4 max-w-[28ch] text-sm text-muted-foreground">
             eBay Evo Foundations content, presented with Bklit UI charts.
           </p>
         </div>
