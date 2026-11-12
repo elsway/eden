@@ -27,7 +27,7 @@ export function Hero() {
               </a>
             </div>
             <p className="font-mono text-[11px] uppercase leading-6 tracking-wider text-muted-foreground">
-              eBay Playbook // Foundations · {CRAWL_TOTALS.publicPages} public pages
+              Evo design system // Foundations · {CRAWL_TOTALS.publicPages} public pages
             </p>
           </div>
         </div>

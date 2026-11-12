@@ -1,12 +1,10 @@
 import { ArrowUpRight } from "lucide-react";
-import { PLAYBOOK_URL } from "@/content/foundations";
 
 export const REPO_URL = "https://github.com/elsway/eden";
 
 const NAV = [
   { href: "#charts", label: "Charts" },
   { href: "#topics", label: "Topics" },
-  { href: `${PLAYBOOK_URL}/foundations`, label: "Playbook", external: true },
 ] as const;
 
 function GithubMark({ className }: { readonly className?: string }) {

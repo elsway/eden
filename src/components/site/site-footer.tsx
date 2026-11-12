@@ -1,8 +1,7 @@
-import { FOUNDATION_TOPICS, PLAYBOOK_URL, TOPIC_GROUPS, topicUrl } from "@/content/foundations";
+import { FOUNDATION_TOPICS, TOPIC_GROUPS, topicUrl } from "@/content/foundations";
 import { REPO_URL } from "./site-header";
 
 const SOURCES = [
-  { label: "eBay Playbook", href: PLAYBOOK_URL },
   { label: "Bklit UI", href: "https://bklit.com" },
   { label: "GitHub", href: REPO_URL },
 ] as const;

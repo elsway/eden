@@ -1,9 +1,9 @@
 /**
- * eBay Playbook → Foundations. Structure and page counts come from a crawl of
- * playbook.ebay.com (2026-11-12). Summaries are paraphrased, not copied.
+ * Evo Foundations: topic structure and page counts from a crawl of the source
+ * site (2026-11-12). Summaries are paraphrased, not copied.
  */
 
-export const PLAYBOOK_URL = "https://playbook.ebay.com";
+export const SOURCE_URL = "https://playbook.ebay.com";
 
 export type TopicGroup = "Identity" | "Layout" | "Interaction";
 
@@ -154,7 +154,7 @@ export const CRAWL_TOTALS = { publicPages: 57, gatedPages: 8 } as const;
 export const TOPIC_GROUPS: readonly TopicGroup[] = ["Identity", "Layout", "Interaction"];
 
 export function topicUrl(slug: string): string {
-  return `${PLAYBOOK_URL}/foundations/${slug}`;
+  return `${SOURCE_URL}/foundations/${slug}`;
 }
 
 export function publicShare(): number {

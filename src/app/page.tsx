@@ -8,7 +8,7 @@ import { Divider, FrameRails, HeaderNodes } from "@/components/site/frame";
 import { Hero } from "@/components/site/hero";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
-import { PLAYBOOK_URL, topicUrl } from "@/content/foundations";
+import { SOURCE_URL, topicUrl } from "@/content/foundations";
 
 export default function HomePage() {
   return (
@@ -24,10 +24,10 @@ export default function HomePage() {
         <section id="charts" aria-label="Foundations in charts" className="relative w-full scroll-mt-16 pb-8 md:pb-12">
           <div className="mx-auto w-full max-w-[1336px] px-4 pt-12 lg:px-6">
             <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-12 lg:gap-6">
-              <ChartTile label="Pages per topic" href={`${PLAYBOOK_URL}/foundations`} linkLabel="Foundations" className="h-[380px] md:col-span-7">
+              <ChartTile label="Pages per topic" href={`${SOURCE_URL}/foundations`} linkLabel="Foundations" className="h-[380px] md:col-span-7">
                 <CoverageChart />
               </ChartTile>
-              <ChartTile label="Open without sign-in" href={`${PLAYBOOK_URL}/foundations`} linkLabel="Playbook" className="h-[380px] md:col-span-5">
+              <ChartTile label="Open without sign-in" href={`${SOURCE_URL}/foundations`} linkLabel="Foundations" className="h-[380px] md:col-span-5">
                 <OpenGauge />
               </ChartTile>
               <ChartTile label="Contrast on white" href={topicUrl("accessibility")} linkLabel="Accessibility" className="h-[400px] md:col-span-5">
@@ -46,7 +46,7 @@ export default function HomePage() {
             <h2 id="topics-heading" className="text-balance text-2xl font-bold lg:text-3xl">
               All 14 Foundations
             </h2>
-            <p className="text-pretty text-muted-foreground">Each one opens in the eBay Playbook</p>
+            <p className="text-pretty text-muted-foreground">Grouped by Identity, Layout and Interaction</p>
             <div className="mt-8">
               <TopicIndex />
             </div>

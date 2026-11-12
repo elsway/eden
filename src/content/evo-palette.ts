@@ -1,4 +1,4 @@
-/** Evo color palette, extracted from playbook.ebay.com/foundations/color/using-color. */
+/** Evo color palette, extracted from the source site's Foundations > Color > Using color page. */
 
 export interface ColorTone {
   readonly step: number;
