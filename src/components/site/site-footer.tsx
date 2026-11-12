@@ -12,7 +12,7 @@ const LINK = "text-sm text-muted-foreground transition-colors hover:text-foregro
 /** bklit.com footer: brand block left, link columns right. */
 export function SiteFooter() {
   return (
-    <footer className="relative mt-16 w-full border-t border-divider md:mt-24">
+    <footer className="relative w-full">
       <div className="mx-auto grid max-w-[1336px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_repeat(4,1fr)] lg:px-6">
         <div>
           <p className="text-lg font-bold">

@@ -31,7 +31,7 @@ function Mark() {
 
 export function SiteHeader() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 h-16 w-full bg-sidebar/80 backdrop-blur-sm">
+    <header className="fixed inset-x-0 top-0 z-50 h-16 w-full bg-sidebar/80 backdrop-blur-sm before:pointer-events-none before:absolute before:inset-x-0 before:bottom-0 before:h-px before:bg-border/64">
       <div className="mx-auto grid h-full max-w-[1336px] grid-cols-[auto_1fr_auto] items-center gap-4 md:grid-cols-[1fr_auto_1fr] px-4 lg:px-6">
         <a href="#top" className="flex items-center gap-2 whitespace-nowrap text-xl font-bold leading-none sm:text-2xl">
           <Mark />

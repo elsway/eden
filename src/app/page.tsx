@@ -4,17 +4,18 @@ import { OpenGauge } from "@/components/foundations/open-gauge";
 import { PaletteGrid } from "@/components/foundations/palette-grid";
 import { TopicIndex } from "@/components/foundations/topic-index";
 import { ChartTile } from "@/components/site/chart-tile";
+import { Divider, FrameRails, HeaderNodes } from "@/components/site/frame";
 import { Hero } from "@/components/site/hero";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
 import { PLAYBOOK_URL, topicUrl } from "@/content/foundations";
 
-const Divider = () => <div aria-hidden className="relative h-px w-full bg-border/64 max-sm:bg-border/48" />;
-
 export default function HomePage() {
   return (
-    <>
+    <div className="relative flex flex-1 flex-col overflow-clip">
+      <FrameRails />
       <SiteHeader />
+      <HeaderNodes />
       <main className="flex-1">
         <Hero />
         <Divider />
@@ -40,7 +41,7 @@ export default function HomePage() {
         </section>
         <Divider />
 
-        <section id="topics" aria-labelledby="topics-heading" className="relative w-full scroll-mt-16 pt-16 md:pt-24">
+        <section id="topics" aria-labelledby="topics-heading" className="relative w-full scroll-mt-16 pb-16 pt-16 md:pb-24 md:pt-24">
           <div className="mx-auto w-full max-w-[1336px] px-4 lg:px-6">
             <h2 id="topics-heading" className="text-balance text-2xl font-bold lg:text-3xl">
               All 14 Foundations
@@ -52,7 +53,8 @@ export default function HomePage() {
           </div>
         </section>
       </main>
+      <Divider />
       <SiteFooter />
-    </>
+    </div>
   );
 }
