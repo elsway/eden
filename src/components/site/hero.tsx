@@ -10,7 +10,7 @@ export function Hero() {
               id="hero-heading"
               className="max-w-3xl text-balance text-2xl font-bold sm:text-4xl md:text-5xl lg:text-6xl"
             >
-              eBay&apos;s design foundations, charted
+              Design foundations, charted
             </h1>
             <div className="flex flex-wrap gap-2">
               <a

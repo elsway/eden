@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Foundations Hub",
-  description: "eBay Evo Foundations, laid out with Bklit UI charts.",
+  description: "Evo design system Foundations, laid out with Bklit UI charts.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

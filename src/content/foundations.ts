@@ -22,7 +22,7 @@ export const FOUNDATION_TOPICS: readonly FoundationTopic[] = [
     slug: "color",
     title: "Color",
     group: "Identity",
-    summary: "A vibrant palette that signals eBay is for everyone, tuned separately for product, marketing and illustration.",
+    summary: "A vibrant palette built to feel open to everyone, tuned separately for product, marketing and illustration.",
     publicPages: 6,
     gatedPages: 0,
     subpages: ["Using color", "In product", "In marketing", "In illustration", "Best practices", "Showcase"],

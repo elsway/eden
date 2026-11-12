@@ -17,7 +17,7 @@ export function SiteFooter() {
         <div>
           <EdenLogo className="h-12 text-foreground" />
           <p className="mt-4 max-w-[28ch] text-sm text-muted-foreground">
-            eBay Evo Foundations content, presented with Bklit UI charts.
+            Evo design system Foundations, presented with Bklit UI charts.
           </p>
         </div>
         {TOPIC_GROUPS.map((group) => (
